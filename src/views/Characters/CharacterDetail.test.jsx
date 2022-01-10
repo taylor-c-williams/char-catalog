@@ -19,7 +19,7 @@ const server = setupServer(
   })
 );
 
-describe('Character List', () => {
+describe('Character Detail', () => {
   beforeAll(() => {
     server.listen();
   });
@@ -28,7 +28,7 @@ describe('Character List', () => {
     server.close();
   });
 
-  it('renders a list of characters', async () => {
+  it('renders CharacterDetail accurately', async () => {
     render(
       <MemoryRouter initialEntries={['/characters/1']}>
         <CharacterDetail />
